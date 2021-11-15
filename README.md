@@ -17,3 +17,8 @@ Example:
 
 `hstrace ls`
 ![hstrace](hstrace.png)
+
+Dependencies, Usage
+-------------------
+Make sure you have source-highlight, tput and strace installed.
+Call `./hstrace.sh` just as you would call strace.

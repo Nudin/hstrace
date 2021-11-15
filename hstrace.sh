@@ -1,6 +1,6 @@
 #!/bin/bash
 #set -x
-cd "$(dirname "$0")" || exit
+cd "$(dirname "$(readlink -f "$0")")" || exit
 
 string_length=$(($(tput cols)-95))
 return_col=$(($(tput cols)-55))
