@@ -1,6 +1,12 @@
 #!/bin/bash
 #set -x
-cd "$(dirname "$(readlink -f "$0")")" || exit
+if type realpath > /dev/null; then
+	cd "$(dirname "$(realpath "$0")")" || exit
+elif uname -s | grep -qsi darwin; then
+	cd "$(dirname "$(readlink "$0")")" || exit
+else
+	cd "$(dirname "$(readlink -f "$0")")" || exit
+fi
 
 string_length=$(($(tput cols)-95))
 return_col=$(($(tput cols)-55))

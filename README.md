@@ -21,4 +21,10 @@ Example:
 Dependencies, Usage
 -------------------
 Make sure you have source-highlight, tput and strace installed.
-Call `./hstrace.sh` just as you would call strace.
+Call `hstrace.sh` just as you would call strace.
+
+To install it system wide, I recommend something like:
+```
+# git clone https://github.com/Nudin/hstrace /opt/hstrace
+# ln -s /opt/hstrace/hstrace.sh /usr/local/bin/hstrace
+```
